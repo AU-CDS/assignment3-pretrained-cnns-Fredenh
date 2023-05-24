@@ -156,7 +156,7 @@ def main():
     file_path = os.path.join("out", "classification_report.txt")
     with open(file_path, "w") as f: # “writing” classifier report and saving it
         f.write(report)
-    print("Classification report is saved!")
+    
 
     
 if __name__ == "__main__":
