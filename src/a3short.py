@@ -145,7 +145,6 @@ def main():
     pl.plot_history(history, 10)
     output_path = os.path.join("out", "train_and_val_plots.png")
     plt.savefig(output_path, dpi = 100)
-    print("Plot is saved!")
     # Predictions
     pred = model.predict(test_images)
     pred = np.argmax(pred,axis=1)
@@ -160,7 +159,7 @@ def main():
     file_path = os.path.join("out", "classification_report.txt")
     with open(file_path, "w") as f: # “writing” classifier report and saving it
         f.write(report)
-    print("Classification report is saved!")
+    
 
     
 if __name__ == "__main__":
