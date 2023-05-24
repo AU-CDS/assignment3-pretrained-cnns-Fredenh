@@ -125,7 +125,7 @@ def train_classifier(train_images, test_images, val_images):
     # Fitting model to indo fashion and train model in order to start finetuning 
     history = model.fit(
         train_images,
-        # Indicating that the model should train on all the data in the subset
+        # Indicating that the model should train on all the data
         steps_per_epoch = len(train_images),
         validation_data  = val_images,
         validation_steps = len(val_images),
