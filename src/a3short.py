@@ -33,7 +33,7 @@ import sys
 sys.path.append(".")
 import utils.plotting as pl
 
-def get_data():
+def get_json_data():
     # Loading the json metadata. The metadata includes the labels of each class
     test_df = pd.read_json(os.path.join("in", "images", "metadata","test_data.json" ), lines=True)
     train_df = pd.read_json(os.path.join("in", "images", "metadata","train_data.json" ), lines=True)
@@ -138,7 +138,7 @@ def train_classifier(train_images, test_images, val_images):
     
 def main():
     # Loading and preparing data step
-    train_images, test_images, val_images, test_df = get_data()
+    train_images, test_images, val_images, test_df = get_json_data()
     # Training pretrained CNN
     history, model = train_classifier(train_images, test_images, val_images)
     # Training and validation history plots using helper function from Utils
